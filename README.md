@@ -1,6 +1,7 @@
 # RennsObjectEngine
 
 RennsObjectEngine is a PySide6-based UI animation engine that separates logic, visual rendering, and styling (RSS). It provides interactive components with smooth animations, elastic drag effects, and CSS-like state handling.
+author : @ahsanihlwn
 
 ---
 
