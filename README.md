@@ -1,6 +1,6 @@
 # RennsObjectEngine
 
-RennsObjectEngine is a PySide6-based UI animation engine that separates logic, visual rendering, and styling (RSS). It provides interactive components with smooth animations, elastic drag effects, and CSS-like state handling.
+RennsObjectEngine is a PySide6-based UI animation engine that separates logic, visual rendering, and styling (RENSS). It provides interactive components with smooth animations, elastic drag effects, and CSS-like state handling.
 
 ### author : @ahsanihlwn
 
@@ -21,10 +21,10 @@ from PySide6.QtCore import Qt
 import sys
 ```
 
-Load the RSS file before creating any components:
+Load the RENSS file before creating any components:
 
 ```python
-objects.RennsStyle.load("style1.rss")
+objects.RennsStyle.load("style1.renss")
 ```
 
 ---
@@ -78,7 +78,7 @@ def on_toggle(self, state):
 
 ---
 
-## 3. RSS Structure (Style File)
+## 3. RENSS Structure (Style File)
 
 Example:
 
@@ -213,11 +213,11 @@ render_type="rect"
 ```
 
 * `icon` → rendered using QIcon
-* `rect` → rendered using RSS-based shape properties
+* `rect` → rendered using RENSS-based shape properties
 
 ---
 
-## 9. Full RSS Example
+## 9. Full RENSS Example
 
 ```css
 .primary {
@@ -264,7 +264,7 @@ render_type="rect"
 
 * **RennsButton** → Interaction logic
 * **RennsOverlay** → Visual rendering & animation layer
-* **RennsStyle** → RSS parsing & style management
+* **RennsStyle** → RENSS parsing & style management
 
 Styling is fully separated from component logic.
 
@@ -272,7 +272,7 @@ Styling is fully separated from component logic.
 
 ## 12. Important Notes
 
-* RSS must be loaded before creating any widgets
+* RENSS must be loaded before creating any widgets
 * Defining `width` and `height` is recommended for layout stability
 * Default transition is `0.25s ease`
 * `elastic-drag` is active only while pressing and dragging
