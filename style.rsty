@@ -1,0 +1,381 @@
+/* ═══════════════════════════════════════════════════════════════
+   Renns Object Engine — Feature Showcase
+   Setiap class punya kombinasi fitur berbeda-beda
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ════════════════════════════════════════════════════════════════
+   SECTION 1 — BUTTONS
+   ════════════════════════════════════════════════════════════════ */
+
+/* spring + elastic-drag + blur + glass-border */
+.btn-glass-spring {
+    width: 155;
+    height: 50;
+    background: rgba(28, 30, 55, 0.52);
+    border-radius: 14;
+    color: #ffffff;
+    font-size: 13;
+    font-weight: medium;
+    transition: 0.75s spring;
+    elastic-drag: 10;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.28), 0 8px 28px 0 rgba(0,0,0,0.2);
+    glass-border: 135deg 1.5px;
+}
+.btn-glass-spring:hover  { transform: scale(1.07); background: rgba(40, 44, 78, 0.65); }
+.btn-glass-spring:active { transform: scale(0.93); background: rgba(50, 56, 96, 0.72); }
+
+/* bounce + NO blur + border biasa + NO elastic */
+.btn-solid-bounce {
+    width: 155;
+    height: 50;
+    background: rgba(42, 18, 78, 0.9);
+    border-radius: 12;
+    color: rgba(218, 200, 255, 0.95);
+    font-size: 13;
+    font-weight: medium;
+    transition: 0.42s bounce;
+    border-color: rgba(150, 110, 255, 0.38);
+    border-width: 1.5;
+    box-shadow: 0 4px 18px 0 rgba(70,25,160,0.32);
+}
+.btn-solid-bounce:hover  { transform: scale(1.07); background: rgba(55, 24, 100, 0.92); border-color: rgba(180, 150, 255, 0.55); }
+.btn-solid-bounce:active { transform: scale(0.91); background: rgba(68, 30, 122, 0.95); }
+
+/* ease-out + heavy elastic + blur + glass-border + rotate active */
+.btn-danger-elastic {
+    width: 155;
+    height: 50;
+    background: rgba(95, 18, 30, 0.5);
+    border-radius: 12;
+    color: rgba(255, 205, 210, 0.92);
+    font-size: 13;
+    font-weight: medium;
+    transition: 0.22s ease-out;
+    elastic-drag: 14;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(130,18,30,0.28);
+    glass-border: 148deg 1.3px;
+}
+.btn-danger-elastic:hover  { transform: scale(1.06); background: rgba(122, 24, 40, 0.6); }
+.btn-danger-elastic:active { transform: scale(0.92) rotate(-3deg); background: rgba(148, 30, 50, 0.68); }
+
+/* linear + NO blur + NO elastic + border biasa — paling minimal */
+.btn-ghost-linear {
+    width: 145;
+    height: 50;
+    background: rgba(255, 255, 255, 0.055);
+    border-radius: 12;
+    color: rgba(195, 200, 240, 0.76);
+    font-size: 13;
+    transition: 0.16s linear;
+    border-color: rgba(175, 180, 225, 0.2);
+    border-width: 1;
+}
+.btn-ghost-linear:hover  { background: rgba(255,255,255,0.1); border-color: rgba(200,205,255,0.4); color: rgba(220,224,255,0.95); }
+.btn-ghost-linear:active { transform: scale(0.97); background: rgba(255,255,255,0.15); }
+
+/* ease + blur + glass-border + rotate hover */
+.btn-amber-ease {
+    width: 145;
+    height: 50;
+    background: rgba(82, 50, 8, 0.52);
+    border-radius: 12;
+    color: rgba(255, 228, 138, 0.92);
+    font-size: 13;
+    font-weight: medium;
+    transition: 0.32s ease;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 4px 16px 0 rgba(100,60,0,0.24);
+    glass-border: 145deg 1.2px;
+}
+.btn-amber-ease:hover  { transform: scale(1.06) rotate(2deg); background: rgba(105, 64, 10, 0.62); }
+.btn-amber-ease:active { transform: scale(0.93) rotate(-1deg); background: rgba(128, 78, 12, 0.7); }
+
+/* ease-in-out + blur + glass + heavy shadow — wide card */
+.btn-card-ease {
+    width: 330;
+    height: 66;
+    background: rgba(16, 18, 36, 0.62);
+    border-radius: 18;
+    color: rgba(198, 204, 232, 0.88);
+    font-size: 14;
+    font-weight: light;
+    transition: 0.55s ease-in-out;
+    backdrop-filter: blur(28px);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.3), 0 14px 42px 0 rgba(0,0,0,0.28);
+    glass-border: 128deg 1px;
+}
+.btn-card-ease:hover  { transform: scale(1.03); background: rgba(22, 26, 50, 0.72); }
+.btn-card-ease:active { transform: scale(0.98); background: rgba(28, 32, 60, 0.78); }
+
+/* spring + blur + glass + rotate hover — icon bulat */
+.btn-icon-circle {
+    width: 52;
+    height: 52;
+    background: rgba(22, 28, 65, 0.52);
+    border-radius: 26;
+    color: rgba(190, 200, 255, 0.92);
+    font-size: 21;
+    transition: 0.9s spring;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 18px 0 rgba(18,25,110,0.3);
+    glass-border: 120deg 1.5px;
+}
+.btn-icon-circle:hover  { transform: scale(1.13) rotate(14deg); background: rgba(32, 40, 90, 0.62); }
+.btn-icon-circle:active { transform: scale(0.87) rotate(-10deg); background: rgba(42, 52, 110, 0.7); }
+
+/* bounce + NO blur + border biasa — icon kotak */
+.btn-icon-square {
+    width: 52;
+    height: 52;
+    background: rgba(12, 55, 40, 0.88);
+    border-radius: 13;
+    color: rgba(155, 232, 185, 0.92);
+    font-size: 21;
+    transition: 0.6s bounce;
+    border-color: rgba(35, 170, 110, 0.28);
+    border-width: 1.5;
+    box-shadow: 0 4px 16px 0 rgba(8,95,60,0.28);
+}
+.btn-icon-square:hover  { transform: scale(1.1); background: rgba(16, 72, 52, 0.92); }
+.btn-icon-square:active { transform: scale(0.88); background: rgba(20, 88, 64, 0.96); }
+
+/* spring + elastic + blur + glass — pill bundar */
+.btn-pill-spring {
+    width: 148;
+    height: 46;
+    background: rgba(14, 62, 48, 0.5);
+    border-radius: 23;
+    color: rgba(168, 238, 202, 0.92);
+    font-size: 13;
+    font-weight: medium;
+    transition: 0.5s spring;
+    elastic-drag: 8;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 4px 16px 0 rgba(0,88,58,0.22);
+    glass-border: 115deg 1.2px;
+}
+.btn-pill-spring:hover  { transform: scale(1.08); background: rgba(18, 80, 62, 0.6); }
+.btn-pill-spring:active { transform: scale(0.91) rotate(-3deg); background: rgba(22, 98, 75, 0.68); }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SECTION 2 — TOGGLES
+   ════════════════════════════════════════════════════════════════ */
+
+/* Toggle indigo — spring knob + blur + glass-border */
+.tog-indigo toggle {
+    width: 68;
+    height: 36;
+    border-radius: 18;
+    background: rgba(28, 30, 65, 0.65);
+    backdrop-filter: blur(18px);
+    transition: 0.28s ease;
+    glass-border: 128deg 1px;
+}
+.tog-indigo:hover toggle  { background: rgba(38, 42, 86, 0.72); }
+.tog-indigo:active toggle { background: rgba(22, 78, 138, 0.72); }
+
+.tog-indigo toggle-knob {
+    width: 28;
+    height: 28;
+    border-radius: 14;
+    background: rgba(208, 214, 255, 0.96);
+    transition: 0.78s spring;
+    glass-border: 128deg 0.8px;
+}
+.tog-indigo:hover toggle-knob  { background: rgba(232, 236, 255, 1.0); transform: scale(1.08); }
+.tog-indigo:active toggle-knob { background: rgba(175, 210, 255, 0.96); transform: scale(1.2); }
+
+/* Toggle rose — ease-out knob + NO blur + border biasa */
+.tog-rose toggle {
+    width: 62;
+    height: 32;
+    border-radius: 16;
+    background: rgba(78, 14, 26, 0.85);
+    transition: 0.22s ease-out;
+    border-color: rgba(195, 48, 72, 0.28);
+    border-width: 1;
+}
+.tog-rose:hover toggle  { background: rgba(98, 18, 34, 0.9); }
+.tog-rose:active toggle { background: rgba(152, 32, 58, 0.9); }
+
+.tog-rose toggle-knob {
+    width: 24;
+    height: 24;
+    border-radius: 12;
+    background: rgba(255, 215, 220, 0.96);
+    transition: 0.65s spring;
+}
+.tog-rose:hover toggle-knob  { background: rgba(255, 236, 238, 1.0); }
+.tog-rose:active toggle-knob { background: rgba(255, 175, 190, 0.96); transform: scale(1.18); }
+
+/* Toggle minimal — linear + NO blur + NO border + NO glass */
+.tog-minimal toggle {
+    width: 54;
+    height: 28;
+    border-radius: 14;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.16s linear;
+}
+.tog-minimal:hover toggle  { background: rgba(255,255,255,0.16); }
+.tog-minimal:active toggle { background: rgba(65, 185, 130, 0.55); }
+
+.tog-minimal toggle-knob {
+    width: 22;
+    height: 22;
+    border-radius: 11;
+    background: rgba(238, 240, 244, 0.95);
+    transition: 0.28s ease-out;
+}
+.tog-minimal:active toggle-knob { background: rgba(195, 242, 218, 0.96); transform: scale(1.1); }
+
+/* Toggle amber — bounce knob + blur + glass */
+.tog-amber toggle {
+    width: 64;
+    height: 34;
+    border-radius: 17;
+    background: rgba(65, 38, 6, 0.65);
+    backdrop-filter: blur(16px);
+    transition: 0.3s ease;
+    glass-border: 142deg 1px;
+}
+.tog-amber:hover toggle  { background: rgba(85, 50, 8, 0.72); }
+.tog-amber:active toggle { background: rgba(130, 80, 12, 0.72); }
+
+.tog-amber toggle-knob {
+    width: 26;
+    height: 26;
+    border-radius: 13;
+    background: rgba(255, 226, 140, 0.96);
+    transition: 0.5s bounce;
+    glass-border: 142deg 0.8px;
+}
+.tog-amber:hover toggle-knob  { background: rgba(255, 238, 175, 1.0); }
+.tog-amber:active toggle-knob { background: rgba(255, 210, 100, 0.96); transform: scale(1.15); }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SECTION 3 — ACTION GROUPS
+   ════════════════════════════════════════════════════════════════ */
+
+/* FAB 1 — horizontal center + blur + glass + bounce + rotate 90 active */
+.fab-indigo {
+    width: 56;
+    height: 56;
+    background: rgba(22, 26, 60, 0.65);
+    border-radius: 28;
+    color: rgba(195, 205, 255, 0.92);
+    font-size: 22;
+    font-weight: bold;
+    transition: 0.42s bounce;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.35), 0 8px 36px 0 rgba(18,22,100,0.25);
+    glass-border: 132deg 1.2px;
+    action-direction: horizontal;
+    action-anchor: center;
+    action-gap: 8;
+    action-padding: 8;
+    action-item-width: 86;
+    action-item-height: 44;
+}
+.fab-indigo:hover  { transform: scale(1.1); background: rgba(32, 38, 84, 0.75); }
+.fab-indigo:active { transform: scale(0.88) rotate(90deg); background: rgba(42, 50, 105, 0.82); }
+
+/* FAB 2 — vertical top + border biasa + bounce */
+.fab-rose {
+    width: 50;
+    height: 50;
+    background: rgba(85, 15, 28, 0.65);
+    border-radius: 25;
+    color: rgba(255, 198, 208, 0.92);
+    font-size: 20;
+    font-weight: bold;
+    transition: 0.38s ease;
+    backdrop-filter: blur(16px);
+    border-color: rgba(195, 48, 72, 0.28);
+    border-width: 1;
+    box-shadow: 0 4px 18px 0 rgba(125,18,35,0.3);
+    action-direction: vertical;
+    action-anchor: top;
+    action-gap: 6;
+    action-padding: 6;
+    action-item-width: 108;
+    action-item-height: 40;
+}
+.fab-rose:hover  { transform: scale(1.08); background: rgba(108, 20, 36, 0.75); }
+.fab-rose:active { transform: scale(0.9) rotate(-90deg); background: rgba(130, 26, 46, 0.82); }
+
+/* FAB 3 — horizontal right + glass + spring */
+.fab-amber {
+    width: 50;
+    height: 50;
+    background: rgba(72, 42, 6, 0.6);
+    border-radius: 25;
+    color: rgba(255, 220, 125, 0.92);
+    font-size: 20;
+    font-weight: bold;
+    transition: 0.65s spring;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 4px 18px 0 rgba(98,55,0,0.28);
+    glass-border: 140deg 1.2px;
+    action-direction: horizontal;
+    action-anchor: right;
+    action-gap: 8;
+    action-padding: 8;
+    action-item-width: 86;
+    action-item-height: 44;
+}
+.fab-amber:hover  { transform: scale(1.08); background: rgba(92, 54, 8, 0.7); }
+.fab-amber:active { transform: scale(0.9) rotate(45deg); background: rgba(112, 66, 12, 0.78); }
+
+/* Items slate — glass-border + blur */
+.item-slate {
+    width: 86;
+    height: 44;
+    background: rgba(26, 28, 65, 0.58);
+    border-radius: 11;
+    color: rgba(190, 196, 255, 0.9);
+    font-size: 12;
+    font-weight: medium;
+    transition: 0.18s ease-out;
+    backdrop-filter: blur(16px);
+    glass-border: 132deg 0.8px;
+}
+.item-slate:hover  { background: rgba(36, 40, 88, 0.68); transform: scale(1.05); }
+.item-slate:active { background: rgba(46, 52, 110, 0.75); transform: scale(0.94); }
+
+/* Items rose — border biasa + blur */
+.item-rose {
+    width: 108;
+    height: 40;
+    background: rgba(78, 13, 26, 0.56);
+    border-radius: 10;
+    color: rgba(255, 192, 202, 0.9);
+    font-size: 12;
+    font-weight: medium;
+    transition: 0.18s ease-out;
+    backdrop-filter: blur(16px);
+    border-color: rgba(190, 48, 70, 0.22);
+    border-width: 1;
+}
+.item-rose:hover  { background: rgba(100, 18, 34, 0.66); transform: scale(1.05); }
+.item-rose:active { background: rgba(122, 22, 42, 0.74); transform: scale(0.94); }
+
+/* Items amber — glass-border + blur */
+.item-amber {
+    width: 86;
+    height: 44;
+    background: rgba(68, 40, 6, 0.56);
+    border-radius: 11;
+    color: rgba(255, 220, 125, 0.9);
+    font-size: 12;
+    font-weight: medium;
+    transition: 0.18s ease-out;
+    backdrop-filter: blur(16px);
+    glass-border: 140deg 0.8px;
+}
+.item-amber:hover  { background: rgba(88, 52, 8, 0.66); transform: scale(1.05); }
+.item-amber:active { background: rgba(106, 64, 10, 0.74); transform: scale(0.94); }
